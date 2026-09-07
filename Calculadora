@@ -1,1 +1,46 @@
+def somar(num, num2):
+    return num + num2
 
+def subtrair(num, num2):
+    return num - num2
+
+def multiplicar(num, num2):
+    return num * num2
+
+def dividir(num, num2):
+    if num2 == 0:
+        return ZeroDivisionError ("Não é Possível Dividir por Zero")
+    return num // num2
+    
+
+op = ""
+while True:
+    print("-----CALCULADORA-----")
+    op = input("Escolha a Operação Matemática: \n"\
+    "1 - Adição \n" \
+    "2 - Subtração \n" \
+    "3 - Multiplicação \n" \
+    "4 - Divisão \n")
+    if op not in ["1", "2", "3", "4"]:
+        print("Opção Inválida")
+        continue
+    num = int(input("Digite Um Número: "))
+
+    num2 = int(input("Digite o Segundo Número: "))
+
+    if op == "1":
+        resultado = somar(num, num2)
+        print(resultado)
+    elif op == "2":
+        resultado = subtrair(num, num2)
+        print(resultado)
+    elif op == "3":
+        resultado = multiplicar(num, num2)
+        print(resultado)
+    elif op == "4":
+        resultado = dividir(num, num2)
+        print(resultado)
+
+
+
+    
